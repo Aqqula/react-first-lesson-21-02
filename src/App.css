@@ -1,4 +1,16 @@
-.App {
+.heading {
+  text-align: center;
+  color: teal;
+}
+.welcome {
+  padding: 10px;
+  margin: 5px;
+  border: 2px solid tomato;
+  color: tomato;
+}
+
+/* !App For React Example */
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +47,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
