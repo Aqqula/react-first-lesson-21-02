@@ -1,15 +1,16 @@
 import React from "react";
+import styles from "./UserCard.module.css";
 
 const UserCard = (props) => {
   const {
     user: { id, lastName, firstName, isSelected },
     userSelector,
   } = props;
-  const styles = { color: isSelected ? "teal" : "grey" };
+  const style = { color: isSelected ? "teal" : "grey" };
   const handleSelector = () => userSelector(id);
   return (
-    <article style={styles} onClick={handleSelector}>
-      <h3>
+    <article className={styles.article} style={style} onClick={handleSelector}>
+      <h3 className={styles.h3}>
         <em>{id}) </em> {firstName} {lastName}
       </h3>
     </article>

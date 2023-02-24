@@ -1,13 +1,24 @@
 import React from "react";
 import "./App.css";
-import CiaoSection from "./components/CiaoSection";
-import UserSection from "./components/UserSection";
+// import CiaoSection from "./components/CiaoSection";
+// import UserSection from "./components/UserSection";
+import Ciao from "./components/CiaoSection/Ciao";
+import StopWatch from "./components/StopWatch";
+import StopWatchTimeOut from "./components/StopWatchTimeOut";
+import UserCard from "./components/UserSection/UserCard";
 
-const App = () => {
+const App = (props) => {
   return (
     <>
-      {/* <UserSection /> */}
-      <CiaoSection />
+      <StopWatchTimeOut />
+      <UserCard
+        user={{ id: 2, firstName: "Brad", lastName: "Pitt" }}
+        userSelector="#"
+      />
+      <StopWatch />
+      <Ciao classStyle="welcome" name="qwerty" id="2" />
+      {/* <UserSection />
+      <CiaoSection /> */}
     </>
   );
 };
