@@ -1,0 +1,23 @@
+// @import "./../../../common/styles/colors";
+@use "/src/common/styles/colors" as *;
+@use "/src/common/styles/breakpoints" as bp;
+@use "/src/common/styles/template" as *;
+@use "/src/common/styles/mixin" as mx;
+
+.container {
+  @extend .flex-column;
+  background-color: $color-main;
+  color: $color-text;
+}
+.btn {
+  @extend %one-line;
+  display: block;
+  @include mx.border-radius(15px);
+}
+
+@media screen and (min-width: bp.$sm) {
+  .container {
+    border-radius: 20px;
+    padding: 20px;
+  }
+}

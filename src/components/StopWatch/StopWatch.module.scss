@@ -1,0 +1,27 @@
+@use "/src/common/styles/template" as *;
+@use "/src/common/styles/colors" as colors;
+
+.container {
+  @extend .flex-column;
+
+  width: 70%;
+  max-width: 400px;
+  margin: auto;
+  margin-bottom: 5px;
+  padding: 30px 0;
+
+  background-color: colors.$color-main;
+  color: colors.$color-text-sw;
+
+  text-align: center;
+}
+.controlBtn {
+  @extend .flex-row;
+}
+.btn {
+  margin: 10px;
+  padding: 0.5em 1.5em;
+  border: none;
+  background-color: wheat;
+  color: teal;
+}

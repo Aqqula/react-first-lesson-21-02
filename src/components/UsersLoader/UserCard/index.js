@@ -1,0 +1,26 @@
+import React from "react";
+import PropTypes from "prop-types";
+
+const UserCard = (props) => {
+  const {
+    user: {
+      email,
+      gender,
+      nat,
+      name: { first, last },
+    },
+  } = props;
+  return (
+    <article>
+      <h3>{first} {last}</h3>
+      <p>nat: {nat} ({gender})</p>
+      <p>Email: {email}</p>
+    </article>
+  );
+};
+
+UserCard.propTypes = {
+  user: PropTypes.object,
+};
+
+export default UserCard;
