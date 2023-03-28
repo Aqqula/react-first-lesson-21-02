@@ -14,7 +14,7 @@ export const getRandomUser = (options = {}) => {
     ...defaultOptions,
     ...options,
   };
-  // console.log(queryString.stringify(resOptions));
+  console.log(queryString.stringify(resOptions));
   return fetch(
     `https://randomuser.me/api/?${queryString.stringify(resOptions)}`
   ).then((response) => response.json());
